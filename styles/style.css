@@ -24,3 +24,6 @@ ul {
 p {
  text-align: center;
 }
+#zegar {
+	text-align: right;
+}

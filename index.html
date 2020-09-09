@@ -1,24 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
   <head>
     <meta charset="utf-8">
     <title>Strona maczanowa</title>
    <link href="styles/style.css" rel="stylesheet" type="text/css">
-   <script type="text/javascript">
-   var dzisaj = new Date();
-   
-   var dzien = dzisiaj.getDate();
-   var miesiac = dzisiaj.getMonth()+1;
-   var rok = dzisiaj.getFullYear();
-   
-   var godzina = dzisiaj.getHours();
-   var minuta = dzisiaj.getMinutes();
-   var sekunda = dzisiaj.getSeconds();
-   
-   </script>
+   <script type="text/javascript" src="scripts/timer.js"></script>
   </head>
-  <body>
- <h1>NIEBEZPIECZNE MACZANY</h1>
+  <body onload="odliczanie();">
+  <div id="zegar"></div>
+ <h1>NIEBEZPIECZNE MACZANY</h1> 
 <img src="images/spice.jpg" alt="Maczan groźny">
    <p><strong><a href="https://sin.org.pl/substancje/syntetyczne-kannabinoidy/">Syntetyczne kannabinoidy</a></strong> (inaczej domestos haze) to niebezpieczne narkotyki, ale jeśli już planujesz je brać to stostuj się do poniższych zaleceń.</p>
 <ul> 
@@ -30,10 +20,7 @@
 <img src="images/rip.png" alt="Jedna z ofiar śmiertelnych">
 <p>Jedna z ofiar śmiertelnych</p>
 <img src="images/znicz.gif" alt="Rip znicz">
-  <div id="zegar">aa</div>
-  <script type="text/javascript">
-  document.getElementById("zegar").innerHTML = dzien+"/";
-  </script>
+  
   
   </body>
 </html> 
