@@ -4,6 +4,18 @@
     <meta charset="utf-8">
     <title>Strona maczanowa</title>
    <link href="styles/style.css" rel="stylesheet" type="text/css">
+   <script type="text/javascript">
+   var dzisaj = new Date();
+   
+   var dzien = dzisiaj.getDate();
+   var miesiac = dzisiaj.getMonth()+1;
+   var rok = dzisiaj.getFullYear();
+   
+   var godzina = dzisiaj.getHours();
+   var minuta = dzisiaj.getMinutes();
+   var sekunda = dzisiaj.getSeconds();
+   
+   </script>
   </head>
   <body>
  <h1>NIEBEZPIECZNE MACZANY</h1>
@@ -18,5 +30,10 @@
 <img src="images/rip.png" alt="Jedna z ofiar śmiertelnych">
 <p>Jedna z ofiar śmiertelnych</p>
 <img src="images/znicz.gif" alt="Rip znicz">
+  <div id="zegar">aa</div>
+  <script type="text/javascript">
+  document.getElementById("zegar").innerHTML = dzien+"/";
+  </script>
+  
   </body>
 </html> 
