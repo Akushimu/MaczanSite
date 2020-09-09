@@ -11,6 +11,7 @@ html {
 p {
   color: black;
   font-size: 25px;
+  text-align: center;
 }
 img {
   width: 500px;
@@ -21,9 +22,13 @@ ul {
  font-size: 25px;
  text-align: center;
 }
-p {
- text-align: center;
-}
+
 #zegar {
+	font-size: 25px;
 	text-align: right;
+}
+#ilupoleglo {
+	color: red;
+	font-size: 25px;
+	text-align: center;
 }
