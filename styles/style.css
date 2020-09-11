@@ -32,3 +32,21 @@ ul {
 	font-size: 25px;
 	text-align: center;
 }
+#wynik {
+	color: red;
+	font-size: 25px;
+	text-align: center;
+}
+#pole {
+	display: block;
+  margin: 0 auto;
+
+}
+#przycisk {
+	display: block;
+  margin: 0 auto;
+
+}
+#dol {
+	text-align: center;
+}
