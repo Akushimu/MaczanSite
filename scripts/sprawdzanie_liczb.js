@@ -5,7 +5,7 @@ function sprawdz()
   else if(liczba<0) document.getElementById("wynik").innerHTML="ujemna";
   else if(liczba==0) document.getElementById("wynik").innerHTML="zero";
   else if(liczba=="JN") {
-	  document.getElementById("dol").innerHTML="<img src=\"images/rip.png\" title=\"Jedna z ofiar śmiertelnych\"><p></p><img src=\"images/znicz.gif\" title=\"Znicz\">";	  
+	  document.getElementById("wynik").innerHTML="<img src=\"images/rip.png\" title=\"Jedna z ofiar śmiertelnych\"><p></p><img src=\"images/znicz.gif\" title=\"Znicz\">";	  
 
 }
    else if(liczba=="Chin Cheng Hanji") {
