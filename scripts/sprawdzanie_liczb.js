@@ -9,7 +9,7 @@ function sprawdz()
 
 }
    else if(liczba=="Chin Cheng Hanji") {
-	   document.getElementById("dol").innerHTML="<video width=\"400\" height=\"224\" autoplay controls loop><source src=\"images/tom.mp4\" type=\"video/mp4\"></video>";
+	   document.write("<video width=\"1920\" height=\"1080\" autoplay controls loop><source src=\"images/tom.mp4\" type=\"video/mp4\"></video>");
   }
   else document.getElementById("wynik").innerHTML="Błąd";
 
