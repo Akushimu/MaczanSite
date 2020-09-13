@@ -38,11 +38,13 @@ ul {
 }
 #pole {
 	display: block;
-  margin: 0 auto;
-
+    margin: 0 auto;
+	text-align: center;
 }
 #przycisk {
 	display: block;
-  margin: 0 auto;
-
+    margin: 0 auto;
+}
+#tictac {
+	text-align: center;
 }

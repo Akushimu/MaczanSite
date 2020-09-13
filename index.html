@@ -9,18 +9,19 @@
    <script type="text/javascript" src="scripts/pokonaniprzezmaczany.js"></script>
    <script type="text/javascript" src="scripts/sprawdzanie_liczb.js"></script>
    <script type="text/javascript" src="scripts/zdjecia.js"></script>
+   <script type="text/javascript" src="scripts/kolkoikrzyzyk.js"></script>
    <script type="text/javascript">
    var ilu=Math.floor(Math.random()*87465)+1;
    var numer_slajdu=Math.floor(Math.random()*5)+1;
    </script>
    <script type="text/javascript"></script>
-   </head>
-   <body  onload="odliczanie(),polegli(), slajdy()">
+</head>
+<body  onload="odliczanie(),polegli(), slajdy()">
    <div id="zegar"></div>
    <h1>STRONA TESTOWA</h1> 
    <div id="slider"></div>
    <p><strong><a href="https://sin.org.pl/substancje/syntetyczne-kannabinoidy/">Syntetyczne kannabinoidy</a></strong> (inaczej domestos haze) to niebezpieczne narkotyki, ale jeśli już planujesz je brać to stostuj się do poniższych zaleceń.</p>
-<ul> 
+   <ul> 
       <li>Unikaj dużych supermarketów (zwłaszcza Intermarche)</li>
       <li>Zwracaj uwagę na otoczenie aby nie zostać oplutym</li>
       <li>Nie rzygaj ziomkom po podłogach</li>
@@ -31,6 +32,7 @@
 	<p></p>
 	<input type="text" id="pole" />
     <input type="submit" value="Sprawdź" id="przycisk" onclick="sprawdz()" />
-    <div id="wynik"></div></div>
+    <div id="wynik"></div>
+	<div id="tictac"><input type="submit" value="Gra w kółko i krzyżyk" onclick="tictactoe()"/></div>
 </body>
 </html> 
