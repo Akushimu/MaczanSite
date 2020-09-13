@@ -11,6 +11,10 @@ function sprawdz()
    else if(liczba=="Chin Cheng Hanji") {
 	   document.write("<video width=\"1920\" height=\"1080\" autoplay controls loop><source src=\"images/tom.mp4\" type=\"video/mp4\"></video>");
   }
+  else if(liczba=="JD") {
+	  document.getElementById("wynik").innerHTML="Oj tak tak byczq +1";	  
+
+}
   else document.getElementById("wynik").innerHTML="Błąd";
 
 
