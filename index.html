@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Strona maczanowa</title>
+	<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>		  
    <link href="styles/style.css" rel="stylesheet" type="text/css">
    <script type="text/javascript" src="scripts/timer.js"></script>
@@ -16,7 +17,7 @@
    var numer_slajdu=Math.floor(Math.random()*5)+1;
    </script>
 </head>
-<body onload="odliczanie(),polegli(), slajdy(),start()">
+<body onload="odliczanie(),polegli(), slajdy()">
 
    <div id="zegar"></div>
    <h1>STRONA TESTOWA</h1> 
@@ -32,16 +33,17 @@
 	<div id="ilupoleglo"></div>
 	<br>
 	<input type="text" id="pole" />
-    <input type="submit" value="Sprawdź" id="przycisk" onclick="sprawdz()"/>
+    <input type="submit" value="Sprawdź" class="przycisk" onclick="sprawdz_liczbe()"/>
     <div id="wynik"></div>
-	<div id="tictac"><input type="submit" value="Gra w kółko i krzyżyk" onclick="tictactoe()"/></div>
+	<br>
+	<div id="tictac"><input type="submit" class="przycisk" value="Gra w kółko i krzyżyk" onclick="tictactoe()"/></div>
 	<div id="pojemnik">
-	<div id="plansza"></div>	
+	<div id="plansza"><input type="submit" value="Gra w wisielca" class="przycisk" onclick="start_wisielca()"/></div>	
 	<div id="szubienica">
-	<img src="images/s0.jpg" alt="" />
 	</div>
 	<div id="alfabet"></div>
 	<div style="clear:both;"></div>
 	</div>
+	
 </body>
 </html> 
