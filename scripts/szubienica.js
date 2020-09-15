@@ -70,7 +70,7 @@ litery[34] = "Ź";
 
 function start_wisielca()
 {
-	
+	$("#szubienica").fadeIn(500);
 	document.getElementById("szubienica").innerHTML='<img src="images/s0.jpg" alt="" />';
 	var tresc="";
 	
