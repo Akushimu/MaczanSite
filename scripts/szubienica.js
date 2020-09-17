@@ -5,7 +5,7 @@ if(losowanie==1)
 else if(losowanie==2)
 	haslo="Opluty w sylwestra";
 else if(losowanie==3)
-	haslo="Maczanowe zapalenie mózgu";
+	haslo="Dziady z Bajorem";
 else
 	haslo="Błąd losowania";
 
