@@ -15,7 +15,12 @@ function sprawdz_liczbe()
 	  document.getElementById("wynik").innerHTML="Oj tak tak byczq +1";	  
 
 }
-  else document.getElementById("wynik").innerHTML="Błąd";
 
+  else if(liczba=="Dziady leczą") {
+	  document.getElementById("wynik").innerHTML=`<img src="images/dziady.jpg" alt="">`;	  
+
+}
+
+  else document.getElementById("wynik").innerHTML="Błąd";
 
 }
