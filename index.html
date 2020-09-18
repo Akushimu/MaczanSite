@@ -20,7 +20,7 @@
 <body onload="odliczanie(),polegli(), slajdy()">
 
    <div id="zegar"></div>
-   <h1>STRONA TESTOWA</h1> 
+   <h1 id="up">STRONA TESTOWA</h1> 
    <div id="slider"></div>
    <p><strong><a href="https://sin.org.pl/substancje/syntetyczne-kannabinoidy/">Syntetyczne kannabinoidy</a></strong> (inaczej domestos haze) to niebezpieczne narkotyki, ale jeśli już planujesz je brać to stostuj się do poniższych zaleceń.</p>
    <ul> 
@@ -36,14 +36,12 @@
     <input type="submit" value="Sprawdź" class="przycisk" onclick="sprawdz_liczbe()"/>
     <div id="wynik"></div>
 	<br>
-	<div id="tictac"><input type="submit" class="przycisk" value="Gra w kółko i krzyżyk" onclick="tictactoe()"/></div>
+	<div style="width:200px; margin:0 auto;" id="tictac"><input type="submit" class="przycisk" value="Gra w kółko i krzyżyk" onclick="tictactoe()"/></div>
 	<div id="pojemnik">
 	<div id="plansza"><input type="submit" value="Gra w wisielca" class="przycisk" onclick="start_wisielca()"/></div>	
-	<div id="szubienica">
-	</div>
+	<div id="szubienica"></div>
 	<div id="alfabet"></div>
 	<div style="clear:both;"></div>
 	</div>
-	
 </body>
 </html> 
