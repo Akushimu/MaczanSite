@@ -11,7 +11,7 @@ function tictactoe()
 	{
 		var element = "p" + i;
 		pola = pola + '<div class ="polekik" onclick="wpisz(`p0`,`x`)" id="'+element+'"></div>';
-		if((i+1)%3==0)pola = pola + '<br>';
+		if((i+1)%3==0)pola = pola + '<br/	>';
 	}
 	
 	document.getElementById("tictac").innerHTML = pola;
