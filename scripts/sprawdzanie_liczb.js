@@ -20,6 +20,10 @@ function sprawdz_liczbe()
 	  document.getElementById("wynik").innerHTML=`<img src="images/dziady.jpg" alt="">`;	  
 
 }
+else if(liczba=="Koty") {
+	  document.getElementById("wynik").innerHTML=`<video width="640" height="368" autoplay controls loop><source src="images/koty.mp4" type="video/mp4"></video>`;	  
+
+}
 
   else document.getElementById("wynik").innerHTML="Błąd";
 
