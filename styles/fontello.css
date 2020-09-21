@@ -56,13 +56,13 @@
 }
  
 .icon-user:before { content: '\e800'; font-size: 76px; margin-top: 20px;} /* '' */
-.icon-mail:before { content: '\e801'; } /* '' */
-.icon-mail-alt:before { content: '\f0e0'; } /* '' */
-.icon-laptop:before { content: '\f109'; } /* '' */
-.icon-keyboard:before { content: '\f11c'; } /* '' */
-.icon-html5:before { content: '\f13b'; } /* '' */
+.icon-mail:before { content: '\e801'; font-size: 76px; margin-top: 20px;} /* '' */
+.icon-mail-alt:before { content: '\f0e0'; font-size: 76px; margin-top: 20px;} /* '' */
+.icon-laptop:before { content: '\f109'; font-size: 76px; margin-top: 20px;} /* '' */
+.icon-keyboard:before { content: '\f11c'; font-size: 76px; margin-top: 20px;} /* '' */
+.icon-html5:before { content: '\f13b'; font-size: 76px; margin-top: 20px;} /* '' */
 .icon-css3:before { content: '\f13c'; } /* '' */
 .icon-youtube-play:before { content: '\f16a'; font-size: 76px; margin-top: 32px;} /* '' */
 .icon-windows:before { content: '\f17a'; } /* '' */
-.icon-graduation-cap:before { content: '\f19d'; } /* '' */
+.icon-graduation-cap:before { content: '\f19d'; font-size: 76px; margin-top: 20px;} /* '' */
 .icon-steam-squared:before { content: '\f1b7'; font-size: 76px; margin-top: 32px;} /* '' */
