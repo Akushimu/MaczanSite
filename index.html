@@ -18,6 +18,7 @@
    <script type="text/javascript">
    var ilu=Math.floor(Math.random()*87465)+1;
    var numer_slajdu=Math.floor(Math.random()*5)+1;
+   var kiepas = new Audio("images/kiepas.mp3"); 
    </script>
 </head>	
 <body onload="odliczanie(),polegli(), slajdy()">
@@ -56,6 +57,7 @@
 	<div style="clear:both;"></div>
 	</div>
 	</div>
+	<input type="submit" class="przycisk" value="No nie wałowali" onclick="kiepas.play()"/>
 	<div id="zegar"></div>
 </body>
 </html> 
