@@ -57,6 +57,7 @@ body
 	background-color: #0066ff;
 	float: left;
 	text-align: center;
+	cursor: pointer;
 }
 
 .tile0:hover
@@ -72,6 +73,7 @@ body
 	background-color: #3095d3;
 	float: left;
 	text-align: center;
+	cursor: pointer;
 }
 
 .tile1:hover
@@ -87,6 +89,7 @@ body
 	background-color: #666666;
 	float: left;
 	text-align: center;
+	cursor: pointer;
 }
 
 .tile2:hover
@@ -102,6 +105,7 @@ body
 	background-color: #93c748;
 	float: left;
 	text-align: center;
+	cursor: pointer;
 }
 
 .tile3:hover
