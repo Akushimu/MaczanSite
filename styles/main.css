@@ -20,11 +20,19 @@ a:hover   { color: #E9B64A; }
 
 h1
 {
-	font-size: 64px;
+	font-size: 48px;
 	font-weight: 400;
 	text-align: center;
 	letter-spacing: 5px;
 	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+h2
+{
+	color: green;
+	text-align: center;
+	letter-spacing: 5px;
 	margin-bottom: 0px;
 }
 

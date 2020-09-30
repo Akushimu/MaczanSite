@@ -77,7 +77,17 @@ function hideCards(nr1,nr2)
 	
 	if(pairsLeft == 0)
 	{
-		$('.board').html('<h1>Wygrałeś w '+roundsCounter+' rund</h1>')
+		if(roundsCounter<=25)
+		{
+			$('.board').html('<h2>Wygrałeś w '+roundsCounter+` rund, jesteś prawdziwym ćpunem!</h2>
+			<br> <img src="images/blant.png" alt="Blant"> <br>
+			<h2>Blant jest z Ciebie dumny</h2>`
+			)
+		}
+		else
+		{
+			$('.board').html('<h2>Wygrałeś w '+roundsCounter+' rund, wciąż masz wiele do poprawy</h2>')
+		}
 	}
 	
 	lock = false;
