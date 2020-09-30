@@ -18,6 +18,12 @@ body {
   font-size: 25px;
 }
 
+a
+{
+	text-decoration: none;
+	color: black;
+}
+
 #zslid {
   min-height: 516px;
   display: block;
@@ -156,6 +162,13 @@ ul
 }
 
 #cv
+{
+	display: block;
+    margin: 0 auto;
+	text-align: center;
+}
+
+#gierka
 {
 	display: block;
     margin: 0 auto;

@@ -1,66 +1,28 @@
 var cards =["alkohol.jpg","grzyby.jpg","lsd.jpg","tabsy.jpg","ziolo.jpg","maczan.jpg","alkohol.jpg","grzyby.jpg","lsd.jpg","tabsy.jpg","ziolo.jpg","maczan.jpg"];
 
-
-/*	$( "#c0" ).click(function() {
-  revealCard(0);});
-
- $( "#c0" ).on( "click", function() {
-  revealCard(0);
- });
-
-for (i=0;i<11;i++)
-{
-document.getElementById('c'+i).addEventListener("click", function(){revealCard(i);});
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
 }
+
+shuffle(cards);
+
+/*
+	$( "#c0" ).click(function()	{revealCard(0);});
 */
 
-$( "#c0" ).on( "click", function() {
-  revealCard(0);
-});
-
-$( "#c1" ).on( "click", function() {
-  revealCard(1);
-});
-
-$( "#c2" ).on( "click", function() {
-  revealCard(2);
-});
-
-$( "#c3" ).on( "click", function() {
-  revealCard(3);
-});
-
-$( "#c4" ).on( "click", function() {
-  revealCard(4);
-});
-
-$( "#c5" ).on( "click", function() {
-  revealCard(5);
-});
-
-$( "#c6" ).on( "click", function() {
-  revealCard(6);
-});
-
-$( "#c7" ).on( "click", function() {
-  revealCard(7);
-});
-
-$( "#c8" ).on( "click", function() {
-  revealCard(8);
-});
-
-$( "#c9" ).on( "click", function() {
-  revealCard(9);
-});
-
-$( "#c10" ).on( "click", function() {
-  revealCard(10);
-});
-
-$( "#c11" ).on( "click", function() {
-  revealCard(11);
-});
+for (let i=0;i<12;i++)
+{
+$( "#c"+i ).on( "click", function() {
+  revealCard(i);
+ });
+}
 
 var oneVisible = false;
 var roundsCounter = 0;
