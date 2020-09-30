@@ -1,4 +1,4 @@
-var cards =["alkohol.jpg","grzyby.jpg","lsd.jpg","tabsy.jpg","ziolo.jpg","maczan.jpg","alkohol.jpg","grzyby.jpg","lsd.jpg","tabsy.jpg","ziolo.jpg","maczan.jpg"];
+var cards =["alkohol.jpg","grzyby.jpg","lsd.jpg","tabsy.jpg","ziolo.jpg","maczan.jpg","alkohol.jpg","grzyby.jpg","lsd.jpg","tabsy.jpg","ziolo.jpg","maczan.jpg","opio.jpg","kaktus.jpg","opio.jpg","kaktus.jpg"];
 
 function shuffle(a) {
     var j, x, i;
@@ -17,7 +17,7 @@ shuffle(cards);
 	$( "#c0" ).click(function()	{revealCard(0);});
 */
 
-for (let i=0;i<12;i++)
+for (let i=0;i<16;i++)
 {
 $( "#c"+i ).on( "click", function() {
   revealCard(i);
@@ -28,7 +28,7 @@ var oneVisible = false;
 var roundsCounter = 0;
 var firstCard;
 var lock = false;
-var pairsLeft = 6;
+var pairsLeft = 8;
 
 function revealCard(nr)
 {
