@@ -77,7 +77,7 @@ function hideCards(nr1,nr2)
 	
 	if(pairsLeft == 0)
 	{
-		if(roundsCounter<=25)
+		if(roundsCounter<=20)
 		{
 			$('.board').html('<h2>Wygrałeś w '+roundsCounter+` rund, jesteś prawdziwym ćpunem!</h2>
 			<br> <img src="images/blant.png" alt="Blant"> <br>
