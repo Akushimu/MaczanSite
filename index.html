@@ -12,40 +12,38 @@
 			  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
 			  crossorigin="anonymous">
 	</script>	  
-   <link href="styles/style.css" rel="stylesheet" type="text/css">
-   <script type="text/javascript" src="scripts/timer.js"></script>
-   <script type="text/javascript" src="scripts/pokonaniprzezmaczany.js"></script>
-   <script type="text/javascript" src="scripts/sprawdzanie_liczb.js"></script>
-   <script type="text/javascript" src="scripts/zdjecia.js"></script>
-   <script src="scripts/szubienica.js"></script>
-   <script type="text/javascript" src="scripts/kolkoikrzyzyk.js"></script>
-   <script type="text/javascript">
-   var ilu=Math.floor(Math.random()*87465)+1;
-   var numer_slajdu=Math.floor(Math.random()*5)+1;
-   var kiepas = new Audio("images/kiepas.mp3"); 
-   </script>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <script src="scripts/timer.js"></script>
+    <script src="scripts/pokonaniprzezmaczany.js"></script>
+    <script src="scripts/sprawdzanie_liczb.js"></script>
+    <script src="scripts/zdjecia.js"></script>
+    <script src="scripts/szubienica.js"></script>
+    <script src="scripts/kolkoikrzyzyk.js"></script>
+    <script>
+		var ilu=Math.floor(Math.random()*87465)+1;
+		var numer_slajdu=Math.floor(Math.random()*5)+1;
+		var kiepas = new Audio("images/kiepas.mp3"); 
+    </script>
 </head>	
-<body onload="odliczanie(),polegli(), slajdy()">
-   <div id="container">
-   <div id="logo">
-   <h1>STRONA TESTOWA</h1> 
-   </div>
-   <div id="content">
-   <br/>
-   <div id="slider"></div>
-   <p><strong><a href="https://sin.org.pl/substancje/syntetyczne-kannabinoidy/" title="Strona na sinie" target="_blank">Syntetyczne kannabinoidy</a></strong> (inaczej domestos haze) to niebezpieczne narkotyki,
-   <br/>ale jeśli już planujesz je brać to stostuj się do podanych zaleceń:</p>
-   <ul> 
-      <li>Unikaj dużych supermarketów (zwłaszcza Intermarche)</li>
-      <li>Zwracaj uwagę na otoczenie aby nie zostać oplutym</li>
-      <li>Nie rzygaj ziomkom po podłogach</li>
-    </ul>
-	<p>Nie ryzykuj, średnio co 5 sekund jedna osoba mdleje w Interku, teraz już </p>
-	<div id="ilupoleglo"></div>
-	<br/>
+<body onload="odliczanie(); polegli(); slajdy();">
+	<div id="container">
+		<div id="logo">
+			<h1>STRONA TESTOWA</h1> 
+		</div>
+		<div id="content">
+		<br/>
+		<div id="slider"></div>
+		<p><strong><a href="https://sin.org.pl/substancje/syntetyczne-kannabinoidy/" title="Strona na sinie" target="_blank">Syntetyczne kannabinoidy</a></strong> (inaczej domestos haze) to niebezpieczne narkotyki,
+		<br/>ale jeśli już planujesz je brać to stostuj się do podanych zaleceń:</p>
+		<ul> 
+		  <li>Unikaj dużych supermarketów (zwłaszcza Intermarche)</li>
+		  <li>Zwracaj uwagę na otoczenie aby nie zostać oplutym</li>
+		  <li>Nie rzygaj ziomkom po podłogach</li>
+		</ul>
+		<p>Nie ryzykuj, średnio co 5 sekund jedna osoba mdleje w Interku, teraz już </p>
+		<div id="ilupoleglo"></div>
+		<br/>
 	</div>
-	</div>
-	<div id="reszta">
 	<input type="text" id="pole" />
     <input type="submit" value="Sprawdź" class="przycisk" onclick="sprawdz_liczbe()"/>
     <div id="wynik"></div>
@@ -63,9 +61,26 @@
 	</div>
 	<input type="submit" class="przycisk" value="Nie wałowali" onclick="kiepas.play()"/>
 	</br>
-	<a id="cv" href="cwiczenie.html" target="_blank">Test design</a>
+	<div id="liczby">
+		<label for="guessField">Zgadnij liczbę: </label>
+		<input type="text" id="guessField">
+		<input type="submit" value="Wprowadź" id="guessSubmit">
+		<p id="guesses"></p>
+		<p id="lastResult"></p>
+		<p id="lowOrHi"></p>
+		<script src="scripts/liczby.js"></script>
+	</div>
 	<br>
-	<a id="gierka" href="gra.html" target="_blank">Nowa gierka</a>
+	<div id="navi">
+		<label for="nawigacja">Wybierz podstronę:</label>
+		<select id="nawigacja">
+			<option value="index.html">Strona główna</option>
+			<option value="cwiczenie.html">Testowy design</option>
+			<option value="gra.html">Memory game</option>
+		</select>
+		<script src="scripts/nawigacja.js"></script>
+	</div>
 	<div id="zegar"></div>
+	<div style="clear:both;"></div>
 </body>
 </html> 
