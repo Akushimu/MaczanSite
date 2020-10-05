@@ -1,4 +1,4 @@
-function sprawdz_liczbe()
+function checkInput()
 {
   var liczba = document.getElementById("pole").value;
   if(liczba>0) $('#wynik').html("Podana liczba jest dodatnia");

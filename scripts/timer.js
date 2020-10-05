@@ -1,4 +1,4 @@
-function odliczanie()
+function countDown()
 	{
 		var dzisiaj = new Date();
 		
@@ -18,10 +18,10 @@ function odliczanie()
 		document.getElementById("zegar").innerHTML = 
 		 "Dzisiaj jest "+dzien+"/"+miesiac+"/"+rok+" | "+godzina+":"+minuta+":"+sekunda;
 		 
-		 setTimeout("odliczanie()",1000);
+		 setTimeout("countDown()",1000);
 	}
 
-function odliczanie2()
+function countDownB()
 	{
 		var dzisiaj = new Date();
 		
@@ -41,5 +41,5 @@ function odliczanie2()
 		document.getElementById("zegar").innerHTML = 
 		godzina+":"+minuta+":"+sekunda;
 		 
-		 setTimeout("odliczanie2()",1000);
+		 setTimeout("countDownB()",1000);
 	}

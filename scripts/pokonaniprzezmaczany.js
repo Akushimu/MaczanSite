@@ -1,9 +1,10 @@
+var victims=Math.floor(Math.random()*87465)+1;
 
-function polegli()
+function killedBySyntheticCannabinoids()
 {
-document.getElementById("ilupoleglo").innerHTML = "("+ilu+")";
-ilu=ilu+1;
- setTimeout("polegli()",5000);
+document.getElementById("maczanVictims").innerHTML = "("+victims+")";
+victims=victims+1;
+setTimeout("killedBySyntheticCannabinoids()",5000);
  
 
 }

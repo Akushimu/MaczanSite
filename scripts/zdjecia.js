@@ -1,13 +1,15 @@
-function slajdy()
+var slideNumber=Math.floor(Math.random()*5)+1;
+
+function slider()
 {
-numer_slajdu++;
-if(numer_slajdu==6)
-	numer_slajdu=1;
-document.getElementById("slider").innerHTML="<img src=\"images/slajd" + numer_slajdu + ".jpg\" id=\"zslid\"/>";
+slideNumber++;
+if(slideNumber==6)
+	slideNumber=1;
+document.getElementById("slider").innerHTML="<img src=\"images/slajd" + slideNumber + ".jpg\" id=\"zslid\"/>";
 $("#slider").fadeIn(500);
-setTimeout("slajdy()",5000);
-setTimeout("schowaj()",4500);
+setTimeout("slider()",5000);
+setTimeout("hide()",4500);
 }
-function schowaj() {
+function hide() {
 	$("#slider").fadeOut(500);
 }

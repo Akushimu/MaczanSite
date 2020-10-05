@@ -1,33 +1,33 @@
-var losowanie = Math.floor(Math.random()*3)+1;
-var haslo = "";
-if(losowanie==1)
-	haslo="Zgon w Intermarche";
-else if(losowanie==2)
-	haslo="Opluty w sylwestra";
-else if(losowanie==3)
-	haslo="Dziady z Bajorem";
+var randomPassword = Math.floor(Math.random()*3)+1;
+var word = "";
+if(randomPassword==1)
+	word="Zgon w Intermarche";
+else if(randomPassword==2)
+	word="Opluty w sylwestra";
+else if(randomPassword==3)
+	word="Dziady z Bajorem";
 else
-	haslo="Błąd losowania";
+	word="Błąd losowania";
 
-haslo = haslo.toUpperCase();
+word = word.toUpperCase();
 
-var dlugosc = haslo.length;
+var dlugosc = word.length;
 var ile_porazek = 0;
 var yes = new Audio("images/yes.wav");
 var no = new Audio("images/no.wav");
 var win = new Audio("images/tomwin.mp3");
 
-var haslo1 = "";
+var word1 = "";
 
 for (i=0; i<dlugosc; i++)
 {
-	if (haslo.charAt(i)==" ") haslo1 = haslo1 + " ";
-	else haslo1 = haslo1 + "-";
+	if (word.charAt(i)==" ") word1 = word1 + " ";
+	else word1 = word1 + "-";
 }
 
-function wypisz_haslo() 
+function wypisz_word() 
 {
-  document.getElementById("plansza").innerHTML = haslo1;
+  document.getElementById("plansza").innerHTML = word1;
 }
 
 var litery = new Array(35);
@@ -68,7 +68,7 @@ litery[32] = "Z";
 litery[33] = "Ż";
 litery[34] = "Ź"; 
 
-function start_wisielca()
+function hangman()
 {
 	document.getElementById("szubienica").innerHTML='<img src="images/s0.jpg" alt="" />';
 	var tresc="";
@@ -83,7 +83,7 @@ function start_wisielca()
 	document.getElementById("alfabet").innerHTML = tresc;
 	
 	
-	wypisz_haslo();
+	wypisz_word();
 }
 
 String.prototype.ustawZnak = function(pozycja,znak)
@@ -99,9 +99,9 @@ function sprawdz(nr)
 	
 	for(i=0;i<dlugosc;i++)
 	{
-		if(haslo.charAt(i)==litery[nr])
+		if(word.charAt(i)==litery[nr])
 		{
-			haslo1 = haslo1.ustawZnak(i,litery[nr]);
+			word1 = word1.ustawZnak(i,litery[nr]);
 			flaga = true;
 			
 		}
@@ -115,7 +115,7 @@ function sprawdz(nr)
 		document.getElementById(element).style.border = "3px solid #00C000";
 		document.getElementById(element).style.cursor = "default";
 		
-		wypisz_haslo();
+		wypisz_word();
 	}
 	else
 	{
@@ -132,14 +132,14 @@ function sprawdz(nr)
 		document.getElementById("szubienica").innerHTML = '<img src="'+obraz+'" alt="" />';
 	}
 	
-	if(haslo == haslo1) {
+	if(word == word1) {
 		win.play();
-		document.getElementById("alfabet").innerHTML = "Essa byczku, wygrałeś. Hasło to " +haslo+ '<br> <br> <span class="reset" onclick="location.reload()">Wróć na początek</span>';
+		document.getElementById("alfabet").innerHTML = "Essa byczku, wygrałeś. Hasło to " +word+ '<br> <br> <span class="reset" onclick="location.reload()">Wróć na początek</span>';
 		document.getElementById("plansza").innerHTML = "";
 	}
 	
 	if(ile_porazek>=9){
-		document.getElementById("alfabet").innerHTML = "RIP mordo, porażka. Poprawne hasło to " +haslo+ '<br> <br> <span class="reset" onclick="location.reload()">Wróć na początek</span>';
+		document.getElementById("alfabet").innerHTML = "RIP mordo, porażka. Poprawne hasło to " +word+ '<br> <br> <span class="reset" onclick="location.reload()">Wróć na początek</span>';
 	document.getElementById("plansza").innerHTML = "";
 	}
 }

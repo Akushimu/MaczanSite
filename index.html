@@ -20,17 +20,14 @@
     <script src="scripts/szubienica.js"></script>
     <script src="scripts/kolkoikrzyzyk.js"></script>
     <script>
-		var ilu=Math.floor(Math.random()*87465)+1;
-		var numer_slajdu=Math.floor(Math.random()*5)+1;
 		var kiepas = new Audio("images/kiepas.mp3"); 
     </script>
 </head>	
-<body onload="odliczanie(); polegli(); slajdy(); tictactoe(); start_wisielca();">
+<body onload="countDown(); killedBySyntheticCannabinoids(); slider(); tictactoe(); hangman();">
 	<div id="container">
 		<div id="logo">
 			<h1>STRONA TESTOWA</h1> 
 		</div>
-		<div id="content">
 		<br/>
 		<div id="slider"></div>
 		<p><strong><a href="https://sin.org.pl/substancje/syntetyczne-kannabinoidy/" title="Strona na sinie" target="_blank">Syntetyczne kannabinoidy</a></strong> (inaczej domestos haze) to niebezpieczne narkotyki,
@@ -41,11 +38,11 @@
 		  <li>Nie rzygaj ziomkom po podłogach</li>
 		</ul>
 		<p>Nie ryzykuj, średnio co 5 sekund jedna osoba mdleje w Interku, teraz już </p>
-		<div id="ilupoleglo"></div>
+		<div id="maczanVictims"></div>
 		<br/>
 	</div>
 	<input type="text" id="pole" />
-    <input type="submit" value="Sprawdź" class="przycisk" onclick="sprawdz_liczbe()"/>
+    <input type="submit" value="Sprawdź" class="przycisk" onclick="checkInput()"/>
     <div id="wynik"></div>
 	<br/>
 	<div id="tictac"></div>
@@ -57,7 +54,6 @@
 	<div id="szubienica"></div>
 	<div id="alfabet"></div>
 	<div style="clear:both;"></div>
-	</div>
 	</div>
 	</br>
 	<div id="liczby">

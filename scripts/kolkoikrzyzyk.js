@@ -1,37 +1,37 @@
-var plansza = ['','','',
-               '','','',
-			   '','',''];
+var board = ['','','',
+             '','','',
+			 '','',''];
 var count=0;
-var znak = "X";
-var stan = true;
+var mark = "X";
+var state = true;
 
 function stop()
 {
-	stan = false;
+	state = false;
 }
 
-function wygrana()
+function winned()
 {
-	if(plansza[0]=="X" && plansza[1]=="X" && plansza[2]=="X"
-	|| plansza[3]=="X" && plansza[4]=="X" && plansza[5]=="X"
-	|| plansza[6]=="X" && plansza[7]=="X" && plansza[8]=="X"
-	|| plansza[0]=="X" && plansza[4]=="X" && plansza[8]=="X"
-	|| plansza[2]=="X" && plansza[4]=="X" && plansza[6]=="X"
-	|| plansza[0]=="X" && plansza[3]=="X" && plansza[6]=="X"
-	|| plansza[1]=="X" && plansza[4]=="X" && plansza[7]=="X"
-	|| plansza[2]=="X" && plansza[5]=="X" && plansza[8]=="X") 
+	if(board[0]=="X" && board[1]=="X" && board[2]=="X"
+	|| board[3]=="X" && board[4]=="X" && board[5]=="X"
+	|| board[6]=="X" && board[7]=="X" && board[8]=="X"
+	|| board[0]=="X" && board[4]=="X" && board[8]=="X"
+	|| board[2]=="X" && board[4]=="X" && board[6]=="X"
+	|| board[0]=="X" && board[3]=="X" && board[6]=="X"
+	|| board[1]=="X" && board[4]=="X" && board[7]=="X"
+	|| board[2]=="X" && board[5]=="X" && board[8]=="X") 
 	{
 		stop();
 		document.getElementById("wynikkk").innerHTML = "Zwyciężył krzyżyk";
 	}
-	else if(plansza[0]=="O" && plansza[1]=="O" && plansza[2]=="O"
-		 || plansza[3]=="O" && plansza[4]=="O" && plansza[5]=="O"
-		 || plansza[6]=="O" && plansza[7]=="O" && plansza[8]=="O"
-		 || plansza[0]=="O" && plansza[4]=="O" && plansza[8]=="O"
-		 || plansza[2]=="O" && plansza[4]=="O" && plansza[6]=="O"
-		 || plansza[0]=="O" && plansza[3]=="O" && plansza[6]=="O"
-		 || plansza[1]=="O" && plansza[4]=="O" && plansza[7]=="O"
-		 || plansza[2]=="O" && plansza[5]=="O" && plansza[8]=="O")
+	else if(board[0]=="O" && board[1]=="O" && board[2]=="O"
+		 || board[3]=="O" && board[4]=="O" && board[5]=="O"
+		 || board[6]=="O" && board[7]=="O" && board[8]=="O"
+		 || board[0]=="O" && board[4]=="O" && board[8]=="O"
+		 || board[2]=="O" && board[4]=="O" && board[6]=="O"
+		 || board[0]=="O" && board[3]=="O" && board[6]=="O"
+		 || board[1]=="O" && board[4]=="O" && board[7]=="O"
+		 || board[2]=="O" && board[5]=="O" && board[8]=="O")
 		 {
 			 stop();
 		document.getElementById("wynikkk").innerHTML = "Wygrało kółko";
@@ -42,44 +42,45 @@ function wygrana()
 	}
 		 
 }
-function nextTura() 
+function nextRound() 
 {
-	if(znak=="X")
+	if(mark=="X")
 	{
-		znak="O";
+		mark="O";
 		count++;
 	}
 	else 
 	{
-		znak="X";
+		mark="X";
 		count++;
 	}
 }
-function wpisz(gdzie)
+
+function typeSmth(smth)
 {
-	if(stan == true)
+	if(state == true)
 	{
-	var pp = gdzie.id.ustawZnak(0,"");
-	gdzie.innerHTML=znak;
-	plansza[pp]=znak;
+	var pp = smth.id.ustawZnak(0,"");
+	smth.innerHTML=mark;
+	board[pp]=mark;
 	if(count>=4)
-		wygrana();
-	nextTura();
-	gdzie.setAttribute("onclick",";");
-	gdzie.style.cursor = "default";
+		winned();
+	nextRound();
+	smth.setAttribute("onclick",";");
+	smth.style.cursor = "default";
 	}
 }
 
 function tictactoe() 
 {
-	var pola="";
+	var fields="";
 	
 	for(i=0;i<=8;i++)
 	{
 		var element = "p" + i;
-		pola = pola + '<div class ="polekik" onclick="wpisz('+element+')" id="'+element+'"></div>';
-		if((i+1)%3==0)pola = pola + '<br/	>';
+		fields = fields + '<div class ="polekik" onclick="typeSmth('+element+')" id="'+element+'"></div>';
+		if((i+1)%3==0)fields = fields + '<br/	>';
 	}
 	
-	document.getElementById("tictac").innerHTML = pola;
+	document.getElementById("tictac").innerHTML = fields;
 }
