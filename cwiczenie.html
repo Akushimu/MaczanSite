@@ -17,13 +17,13 @@
 	
 </head>
 
-<body onload="countDownB()">
+<body onload="countDown(2)">
 
 	<div id="container">
 	
 		<div class="rectangle">
 			<div id="logo">Łukasz</div>
-			<div id="zegar"></div>
+			<div id="clock"></div>
 			<div style="clear:both;"></div>
 		</div>
 		
@@ -56,12 +56,19 @@
 			<div style="clear:both;"></div>
 			</a>
 		</div>
-		<div style="clear:both;"</div>
+		<div style="clear:both;"> </div>
 	
-		<div class="rectangle">W sumie spoko wyglądają te prostokąty</div>
+		<div id="navi">
+			<label for="nawigacja">Wybierz podstronę:</label>
+			<select id="nawigacja">
+				<option value="cwiczenie.html">Testowy design</option>
+				<option value="index.html">Strona główna</option>
+				<option value="gra.html">Memory game</option>
+			</select>
+			<script src="scripts/nawigacja.js"></script>
+		</div>
 	
 	</div>
-
 
 </body>
 </html>

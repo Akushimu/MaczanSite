@@ -71,7 +71,7 @@ function typeSmth(smth)
 	}
 }
 
-function tictactoe() 
+function ticTacToe() 
 {
 	var fields="";
 	

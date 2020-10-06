@@ -68,7 +68,7 @@ litery[32] = "Z";
 litery[33] = "Ż";
 litery[34] = "Ź"; 
 
-function hangman()
+function hangMan()
 {
 	document.getElementById("szubienica").innerHTML='<img src="images/s0.jpg" alt="" />';
 	var tresc="";

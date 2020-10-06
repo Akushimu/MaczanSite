@@ -1,45 +1,26 @@
-function countDown()
+function countDown(x)
 	{
-		var dzisiaj = new Date();
+		var today = new Date();
 		
-		var dzien = dzisiaj.getDate();
-		var miesiac = dzisiaj.getMonth()+1;
-		var rok = dzisiaj.getFullYear();
+		var day = today.getDate();
+		var month = today.getMonth()+1;
+		var year = today.getFullYear();
 		
-		var godzina = dzisiaj.getHours();
-		if (godzina<10) godzina = "0"+godzina;
+		var hours = today.getHours();
+		if (hours<10) hours = "0"+hours;
 		
-		var minuta = dzisiaj.getMinutes();
-		if (minuta<10) minuta = "0"+minuta;
+		var minutes = today.getMinutes();
+		if (minutes<10) minutes = "0"+minutes;
 		
-		var sekunda = dzisiaj.getSeconds();
-		if (sekunda<10) sekunda = "0"+sekunda;
+		var seconds = today.getSeconds();
+		if (seconds<10) seconds = "0"+seconds;
 		
-		document.getElementById("zegar").innerHTML = 
-		 "Dzisiaj jest "+dzien+"/"+miesiac+"/"+rok+" | "+godzina+":"+minuta+":"+sekunda;
-		 
-		 setTimeout("countDown()",1000);
-	}
-
-function countDownB()
-	{
-		var dzisiaj = new Date();
-		
-		var dzien = dzisiaj.getDate();
-		var miesiac = dzisiaj.getMonth()+1;
-		var rok = dzisiaj.getFullYear();
-		
-		var godzina = dzisiaj.getHours();
-		if (godzina<10) godzina = "0"+godzina;
-		
-		var minuta = dzisiaj.getMinutes();
-		if (minuta<10) minuta = "0"+minuta;
-		
-		var sekunda = dzisiaj.getSeconds();
-		if (sekunda<10) sekunda = "0"+sekunda;
-		
-		document.getElementById("zegar").innerHTML = 
-		godzina+":"+minuta+":"+sekunda;
-		 
-		 setTimeout("countDownB()",1000);
+		if(x==1) {
+		$('#clock').html(day+"/"+month+"/"+year+" | "+hours+":"+minutes+":"+seconds);
+		setTimeout("countDown(1)",1000);
+		}
+		else if(x==2) {
+			$('#clock').html(hours+":"+minutes+":"+seconds);
+			setTimeout("countDown(2)",1000);
+		}
 	}
