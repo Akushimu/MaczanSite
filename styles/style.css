@@ -37,7 +37,7 @@ ul
 
 #clock 
 {
-	text-align: right;
+	float: right;
 }
 #maczanVictims
  {
@@ -179,7 +179,7 @@ ul
 
 #navi
 {   
-	text-align: left;
+	float: left;
 }
 
 #liczby
