@@ -24,7 +24,7 @@ function checkGuess()
 	
 	if(userGuess === randomNumber) {
 		lastResult.text('Gratulacje, wygrałeś!');
-		lastResult.css('background-color','green');
+		lastResult.css('background-color','pink');
 		lowOrHi.text('');
 		setGameOver();
 		} 
@@ -35,7 +35,7 @@ function checkGuess()
 	} 
 	else {
 		lastResult.text('Błędna liczba');
-		lastResult.css('background-color','red');
+		lastResult.css('background-color','purple');
 		if (userGuess < randomNumber) {
 			lowOrHi.text('Liczba jest za mała');
 		}
