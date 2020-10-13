@@ -1,16 +1,33 @@
-var board = ['','','',
+let board = ['','','',
              '','','',
 			 '','',''];
-var count=0;
-var mark = "X";
-var state = true;
+let count=0;
+let mark = "X";
+
+function ticTacToe() 
+{
+	let fields="";
+	
+	for(i=0;i<=8;i++)
+	{
+		let elementId = "p" + i;
+		fields += '<div class = "polekik" onclick= "typeSmth('+i+')" id= "'+elementId+'"></div>';
+		if((i+1)%3==0)fields += '<br>';
+	}
+	
+	$('#tictac').html(fields);
+}
+
 
 function stop()
 {
-	state = false;
+	for(let i=0;i<=8;i++) {
+		$('#p'+i).attr("onclick",";");
+		$('#p'+i).css("cursor","default");
+	}
 }
 
-function winned()
+function checkIfWon()
 {
 	if(board[0]=="X" && board[1]=="X" && board[2]=="X"
 	|| board[3]=="X" && board[4]=="X" && board[5]=="X"
@@ -21,8 +38,8 @@ function winned()
 	|| board[1]=="X" && board[4]=="X" && board[7]=="X"
 	|| board[2]=="X" && board[5]=="X" && board[8]=="X") 
 	{
+		$("#wynikkk").html("Zwyciężył krzyżyk");
 		stop();
-		document.getElementById("wynikkk").innerHTML = "Zwyciężył krzyżyk";
 	}
 	else if(board[0]=="O" && board[1]=="O" && board[2]=="O"
 		 || board[3]=="O" && board[4]=="O" && board[5]=="O"
@@ -32,13 +49,18 @@ function winned()
 		 || board[0]=="O" && board[3]=="O" && board[6]=="O"
 		 || board[1]=="O" && board[4]=="O" && board[7]=="O"
 		 || board[2]=="O" && board[5]=="O" && board[8]=="O")
-		 {
+		{
+			for(let i=0;i<=8;i++) {
+				$('#p'+i).attr("onclick",";");
+				$('#p'+i).css("cursor","default");
+	
+			}
+			 $("#wynikkk").html("Wygrało kółko");
 			 stop();
-		document.getElementById("wynikkk").innerHTML = "Wygrało kółko";
-	}
-	else if(count==8){
+		}
+	else if(count==9){
+		$("#wynikkk").html("Remis");
 		stop();
-		document.getElementById("wynikkk").innerHTML = "Remis";
 	}
 		 
 }
@@ -46,41 +68,23 @@ function nextRound()
 {
 	if(mark=="X")
 	{
+		$("#wynikkk").html("Tura kółka");
 		mark="O";
 		count++;
 	}
 	else 
 	{
+		$("#wynikkk").html("Tura krzyżyka");
 		mark="X";
 		count++;
 	}
 }
 
-function typeSmth(smth)
-{
-	if(state == true)
-	{
-	var pp = smth.id.ustawZnak(0,"");
-	smth.innerHTML=mark;
-	board[pp]=mark;
-	if(count>=4)
-		winned();
+function typeSmth(smth) {
+	$('#p'+smth).html(mark);
+	board[smth]=mark;
 	nextRound();
-	smth.setAttribute("onclick",";");
-	smth.style.cursor = "default";
-	}
-}
-
-function ticTacToe() 
-{
-	var fields="";
-	
-	for(i=0;i<=8;i++)
-	{
-		var element = "p" + i;
-		fields = fields + '<div class ="polekik" onclick="typeSmth('+element+')" id="'+element+'"></div>';
-		if((i+1)%3==0)fields = fields + '<br/	>';
-	}
-	
-	document.getElementById("tictac").innerHTML = fields;
+	if(count >= 5) checkIfWon();
+	$('#p'+smth).attr("onclick",";");
+	$('#p'+smth).css("cursor","default");
 }
