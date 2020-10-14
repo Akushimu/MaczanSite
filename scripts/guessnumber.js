@@ -24,7 +24,7 @@ function checkGuess()
 	
 	if(userGuess === randomNumber) {
 		lastResult.text('Gratulacje, wygrałeś!');
-		lastResult.css('background-color','pink');
+		lastResult.css('background-color','green');
 		lowOrHi.text('');
 		setGameOver();
 		} 
