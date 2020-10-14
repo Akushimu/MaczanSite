@@ -7,7 +7,7 @@
 }
 #logo
 {  
-	background-color: #4B0082;
+	background-color: #03DAC6;
 	color:  #FF00FF;
 	text-align: center;
 	border: 5px solid red;
@@ -17,13 +17,13 @@
 body {
   background-color: #121212;
   font-size: 25px;
-  color: #FF00FF;
+  color: #03DAC6;
 }
 
 a
 {
 	text-decoration: none;
-	color: #800080;
+	color: #018786;
 }
 
 #zslid {
@@ -163,7 +163,7 @@ ul
 	float: left;
 	cursor: pointer;
 }
-#wynikkk
+#tttResult
 {
 	text-align:center;
 	height: 10px;
