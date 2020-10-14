@@ -1,5 +1,5 @@
 let board = [];
-for(let i=0;i<=8;i++) board[i]=i;	 
+for(let i=0;i<=8;i++) board.push(i); 
 let count = 0;
 let mark = "X";
 
