@@ -1,5 +1,4 @@
-function checkInput()
-{
+function checkInput() {
   var field = $('#pole');
   var result = $('#wynik');
   var input = field.val();

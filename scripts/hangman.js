@@ -27,7 +27,7 @@ for (i=0; i<dlugosc; i++)
 
 function wypisz_word() 
 {
-  document.getElementById("plansza").innerHTML = word1;
+	$("#plansza").html(word1);
 }
 
 var litery = new Array(35);
