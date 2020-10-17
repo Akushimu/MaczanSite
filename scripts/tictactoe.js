@@ -64,16 +64,16 @@ function typeSmth(num) {
 	if(count >= 5) checkWin();
 	field.attr("onclick",";");
 	field.css("cursor","default");
-	if(count < 9) botTurn();
+	// if(count < 9) botTurn();
 }
 
-function botTurn() {
-	let ran = Math.floor(Math.random()*9);
-	let field = $('#p' + ran);
-	field.html(mark);
-	board[ran]=mark;
-	if(count < 9) nextRound();
-	if(count >= 5) checkWin();
-	field.attr("onclick",";");
-	field.css("cursor","default");
-}
+// function botTurn() {
+// 	let ran = Math.floor(Math.random()*9);
+// 	let field = $('#p' + ran);
+// 	field.html(mark);
+// 	board[ran]=mark;
+// 	if(count < 9) nextRound();
+// 	if(count >= 5) checkWin();
+// 	field.attr("onclick",";");
+// 	field.css("cursor","default");
+// }
