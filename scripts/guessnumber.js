@@ -1,14 +1,14 @@
-var randomNumber = Math.floor(Math.random() * 100) + 1;
+let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-var guesses = $('#guesses');
-var lastResult = $('#lastResult');
-var lowOrHi = $('#lowOrHi');
+let guesses = $('#guesses');
+let lastResult = $('#lastResult');
+let lowOrHi = $('#lowOrHi');
 
-var guessSubmit = $('#guessSubmit');
-var guessField = $('#guessField');
+let guessSubmit = $('#guessSubmit');
+let guessField = $('#guessField');
 
-var guessCount = 1;
-var resetButton = document.createElement('button');
+let guessCount = 1;
+let resetButton = document.createElement('button');
 
 guessSubmit.click(function(){
 	checkGuess();
@@ -16,7 +16,7 @@ guessSubmit.click(function(){
 
 function checkGuess()
 {
-	var userGuess = Number(guessField.val())
+	let userGuess = Number(guessField.val())
 	if (guessCount === 1) {
 		guesses.text('Poprzednie próby: ');
 	}		

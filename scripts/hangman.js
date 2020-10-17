@@ -1,5 +1,5 @@
-var randomPassword = Math.floor(Math.random()*3)+1;
-var word = "";
+let randomPassword = Math.floor(Math.random()*3)+1;
+let word = "";
 if(randomPassword==1)
 	word="Zgon w Intermarche";
 else if(randomPassword==2)
@@ -11,13 +11,13 @@ else
 
 word = word.toUpperCase();
 
-var dlugosc = word.length;
-var ile_porazek = 0;
-var yes = new Audio("images/yes.wav");
-var no = new Audio("images/no.wav");
-var win = new Audio("images/tomwin.mp3");
+let dlugosc = word.length;
+let ile_porazek = 0;
+let yes = new Audio("images/yes.wav");
+let no = new Audio("images/no.wav");
+let win = new Audio("images/tomwin.mp3");
 
-var word1 = "";
+let word1 = "";
 
 for (i=0; i<dlugosc; i++)
 {
@@ -30,7 +30,7 @@ function wypisz_word()
 	$("#plansza").html(word1);
 }
 
-var litery = new Array(35);
+let litery = new Array(35);
 
 litery[0] = "A";
 litery[1] = "Ą";
@@ -71,11 +71,11 @@ litery[34] = "Ź";
 function hangMan()
 {
 	document.getElementById("szubienica").innerHTML='<img src="images/s0.jpg" alt="" />';
-	var tresc="";
+	let tresc="";
 	
 	for(i=0;i<=34;i++)
 	{
-		var element = "l" + i;
+		let element = "l" + i;
 		tresc = tresc + '<div class ="litera" onclick="sprawdz('+i+')" id="'+element+'">'+litery[i]+'</div>';
 		if((i+1)%7==0)tresc = tresc + '<div style="clear:both;"</div>'
 	}
@@ -95,7 +95,7 @@ String.prototype.ustawZnak = function(pozycja,znak)
 
 function sprawdz(nr)
 {
-	var flaga = false;
+	let flaga = false;
 	
 	for(i=0;i<dlugosc;i++)
 	{
@@ -109,7 +109,7 @@ function sprawdz(nr)
 	if (flaga==true)
 	{
 		yes.play();
-		var element = "l" + nr;
+		let element = "l" + nr;
 		document.getElementById(element).style.background = "#003300";
 		document.getElementById(element).style.color = "#00C000";
 		document.getElementById(element).style.border = "3px solid #00C000";
@@ -120,7 +120,7 @@ function sprawdz(nr)
 	else
 	{
 		no.play();
-		var element = "l" + nr;
+		let element = "l" + nr;
 		document.getElementById(element).style.background = "#330000";
 		document.getElementById(element).style.color = "#C00000";
 		document.getElementById(element).style.border = "3px solid #C00000";
@@ -128,7 +128,7 @@ function sprawdz(nr)
 		document.getElementById(element).setAttribute("onclick",";");
 		
 		ile_porazek++;
-		var obraz = "images/s" + ile_porazek + ".jpg";
+		let obraz = "images/s" + ile_porazek + ".jpg";
 		document.getElementById("szubienica").innerHTML = '<img src="'+obraz+'" alt="" />';
 	}
 	

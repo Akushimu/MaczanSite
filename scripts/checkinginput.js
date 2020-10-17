@@ -1,7 +1,7 @@
 function checkInput() {
-  var field = $('#pole');
-  var result = $('#wynik');
-  var input = field.val();
+  let field = $('#pole');
+  let result = $('#wynik');
+  let input = field.val();
 
   if(input>0 && input!=2137) result.html("Podana liczba jest dodatnia");
   else if(input<0 ) result.html("Podana liczba jest ujemna");

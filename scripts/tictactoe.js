@@ -2,10 +2,10 @@ let board = [];
 for(let i=0;i<=8;i++) board.push(i); 
 let count = 0;
 let mark = "X";
+let result = $("#tttResult");
 
 function ticTacToe() {
-let fields="";
-	
+	let fields="";
 	for(i=0;i<=8;i++) {
 		let elementId = "p" + i;
 		fields += '<div class = "polekik" onclick= "typeSmth('+i+')" id= "'+elementId+'"></div>';
@@ -17,16 +17,15 @@ let fields="";
 
 function stop() {
 	for(let i=0;i<=8;i++) {
-		$('#p'+i).attr("onclick",";");
-		$('#p'+i).css("cursor","default");
+		let field = $('#p'+i);
+		if(field.attr('onclick') != ';') field.attr('onclick',';');
+		if(field.css('cursor') != 'default') field.css('cursor','default');
 	}
 }
 
-function checkIfWon() {
-	let winner;
-	if(mark == 'O') winner = 'krzyżyk';
-	else if(mark == 'X') winner = 'kółko';
+const whoWon = () => mark == 'O' ? 'krzyżyka' : 'kółka';
 
+function checkWin() {
 	if (board[0] == board[1] && board[1] == board[2] ||
 		board[3] == board[4] && board[4] == board[5] ||
 		board[6] == board[7] && board[7] == board[8] ||
@@ -35,33 +34,34 @@ function checkIfWon() {
 		board[0] == board[3] && board[3] == board[6] ||
 		board[1] == board[4] && board[4] == board[7] ||
 		board[2] == board[5] && board[5] == board[8]) {
-		$("#tttResult").html("Zwyciężył " + winner);
+		result.html("Wygrana " + whoWon());
 		stop();
 		}
 	else if(count==9) {
-		$("#tttResult").html("Remis");
+		result.html("Remis");
 		stop();
 	}
 }
 
 function nextRound() {
 	if(mark=="X") {
-		$("#tttResult").html("Tura kółka");
+		result.html("Tura kółka");
 		mark="O";
 		count++;
 	}
 	else {
-		$("#tttResult").html("Tura krzyżyka");
+		result.html("Tura krzyżyka");
 		mark="X";
 		count++;
 	}
 }
 
-function typeSmth(smth) {
-	$('#p'+smth).html(mark);
-	board[smth]=mark;
+function typeSmth(num) {
+	let field = $('#p'+num);
+	field.html(mark);
+	board[num]=mark;
 	if(count < 9) nextRound();
-	if(count >= 5) checkIfWon();
-	$('#p'+smth).attr("onclick",";");
-	$('#p'+smth).css("cursor","default");
+	if(count >= 5) checkWin();
+	field.attr("onclick",";");
+	field.css("cursor","default");
 }
