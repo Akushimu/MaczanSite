@@ -3,6 +3,7 @@ for(let i=0;i<=8;i++) board.push(i);
 let count = 0;
 let mark = "X";
 let result = $("#tttResult");
+let gameState = true;
 
 function ticTacToe() {
 	let fields="";
@@ -21,6 +22,7 @@ function stop() {
 		if(field.attr('onclick') != ';') field.attr('onclick',';');
 		if(field.css('cursor') != 'default') field.css('cursor','default');
 	}
+	gameState = false;
 }
 
 const whoWon = () => mark == 'O' ? 'krzyżyka' : 'kółka';
@@ -45,12 +47,10 @@ function checkWin() {
 
 function nextRound() {
 	if(mark=="X") {
-		result.html("Tura kółka");
 		mark="O";
 		count++;
 	}
 	else {
-		result.html("Tura krzyżyka");
 		mark="X";
 		count++;
 	}
@@ -64,16 +64,19 @@ function typeSmth(num) {
 	if(count >= 5) checkWin();
 	field.attr("onclick",";");
 	field.css("cursor","default");
-	// if(count < 9) botTurn();
+	if(gameState) botTurn();
 }
 
-// function botTurn() {
-// 	let ran = Math.floor(Math.random()*9);
-// 	let field = $('#p' + ran);
-// 	field.html(mark);
-// 	board[ran]=mark;
-// 	if(count < 9) nextRound();
-// 	if(count >= 5) checkWin();
-// 	field.attr("onclick",";");
-// 	field.css("cursor","default");
-// }
+function botTurn() {
+	let ran = Math.floor(Math.random()*9);
+	while(isNaN(board[ran])) {
+		ran = Math.floor(Math.random()*9);
+	}
+	let field = $('#p' + ran);
+	field.html(mark);
+	board[ran]=mark;
+	if(count < 9) nextRound();
+	if(count >= 5) checkWin();
+	field.attr("onclick",";");
+	field.css("cursor","default");
+}
