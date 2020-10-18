@@ -19,13 +19,12 @@ function ticTacToe() {
 function stop() {
 	for(let i=0;i<=8;i++) {
 		let field = $('#p'+i);
-		if(field.attr('onclick') != ';') field.attr('onclick',';');
-		if(field.css('cursor') != 'default') field.css('cursor','default');
+		clearAttr(field);
 	}
 	gameState = false;
 }
 
-const whoWon = () => mark == 'O' ? 'krzyżyka' : 'kółka';
+const whoWon = () => mark == 'O' ? 'kółka' : 'krzyżyka';
 
 function checkWin() {
 	if (board[0] == board[1] && board[1] == board[2] ||
@@ -46,25 +45,20 @@ function checkWin() {
 }
 
 function nextRound() {
-	if(mark=="X") {
-		mark="O";
-		count++;
-	}
-	else {
-		mark="X";
-		count++;
-	}
+	mark == 'X' ? mark = 'O' : mark = 'X';
 }
 
 function typeSmth(num) {
 	let field = $('#p'+num);
 	field.html(mark);
 	board[num]=mark;
-	if(count < 9) nextRound();
+	clearAttr(field);
+	count++;
 	if(count >= 5) checkWin();
-	field.attr("onclick",";");
-	field.css("cursor","default");
-	if(gameState) botTurn();
+	if(gameState) {
+		nextRound();
+		botTurn();
+	}
 }
 
 function botTurn() {
@@ -75,8 +69,13 @@ function botTurn() {
 	let field = $('#p' + ran);
 	field.html(mark);
 	board[ran]=mark;
-	if(count < 9) nextRound();
-	if(count >= 5) checkWin();
+	clearAttr(field);
+	count++;
+	if(count >= 6) checkWin();
+	if(gameState) nextRound();
+}
+
+function clearAttr(field) {
 	field.attr("onclick",";");
 	field.css("cursor","default");
 }
