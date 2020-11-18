@@ -4,6 +4,7 @@ let count = 0;
 let mark = "X";
 let result = $("#tttResult");
 let gameState = true;
+let click = new Audio("images/click.wav");
 
 function ticTacToe() {
 	let fields="";
@@ -49,6 +50,7 @@ function nextRound() {
 }
 
 function typeSmth(num) {
+	click.play();
 	let field = $('#p'+num);
 	field.html(mark);
 	board[num]=mark;
