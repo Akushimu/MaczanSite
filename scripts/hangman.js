@@ -13,9 +13,9 @@ word = word.toUpperCase();
 
 let dlugosc = word.length;
 let ile_porazek = 0;
-let yes = new Audio("images/yes.wav");
-let no = new Audio("images/no.wav");
-let win = new Audio("images/tomwin.mp3");
+let yes = new Audio("sounds/yes.wav");
+let no = new Audio("sounds/no.wav");
+let win = new Audio("sounds/tomwin.mp3");
 
 let word1 = "";
 

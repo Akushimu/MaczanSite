@@ -4,7 +4,7 @@ let count = 0;
 let mark = "X";
 let result = $("#tttResult");
 let gameState = true;
-let click = new Audio("images/click.wav");
+let click = new Audio("sounds/click.wav");
 
 function ticTacToe() {
 	let fields="";
