@@ -1,2 +1,2 @@
 # MaczanSite
-Strona testowa
+Strona HTML do testowania skryptów
